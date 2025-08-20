@@ -1,0 +1,50 @@
+.review-card {
+    transition: transform 0.2s ease-in-out;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.review-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.star-filled {
+    color: #ffc107;
+}
+
+.star-empty {
+    color: #e4e5e9;
+}
+
+.review-header {
+    border-bottom: 1px solid #e9ecef;
+}
+
+.loading-spinner {
+    width: 3rem;
+    height: 3rem;
+}
+
+.empty-state {
+    opacity: 0.7;
+}
+
+.app-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+}
+
+.rating-badge {
+    min-width: 50px;
+}
+
+.app-id-input {
+    max-width: 400px;
+}
+
+.quick-apps .btn {
+    font-size: 0.875rem;
+    padding: 0.25rem 0.75rem;
+}
