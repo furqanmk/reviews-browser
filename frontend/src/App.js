@@ -81,7 +81,7 @@ function App() {
         setError(null);
         
         try {
-            const url = `/api/reviews?app_id=${appID}`;
+            const url = `/api/reviews_by_app?app_id=${appID}`;
             const response = await fetch(url);
             const reviews = await response.json();
 

@@ -11,6 +11,7 @@ import (
 
 	"github.com/furqanmk/reviews-browser/config"
 	"github.com/furqanmk/reviews-browser/internal/api"
+	"github.com/furqanmk/reviews-browser/internal/clients/appstore"
 	"github.com/furqanmk/reviews-browser/internal/database"
 )
 
@@ -42,8 +43,11 @@ func StartAPIServer() {
 	// Start a new HTTP server
 	mux := http.NewServeMux()
 
+	// initialize the App Store API Client
+	apiClient := appstore.NewClient(cfg)
+
 	// Start service
-	api := api.NewAPI(db)
+	api := api.NewAPI(db, apiClient)
 	api.RegisterHandlers(mux)
 
 	server := &http.Server{

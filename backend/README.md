@@ -90,3 +90,7 @@ app-review-browser/
 ├── go.sum
 └── README.md
 ```
+
+## Follow Up
+- Front-end can query an app ID
+- Backend fetches reviews based on an app ID
